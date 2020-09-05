@@ -1,0 +1,54 @@
+:root {
+	--mono-font-family: 'PT Mono', monospace
+	--serif-font-family: 'EB Garamond', serif
+	--sans-serif-font-family: 'Montserrat', sans-serif
+	--light-grey-color: #aaaaaa
+}
+
+body {
+	background: aliceblue
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--serif-font-family)
+	text-align: center
+}
+
+.calc {
+	border: 1px solid var(--light-grey-color)
+	width: 500px
+	margin: 0 auto
+	border-radius: 2em
+	padding: 1em
+	box-shadow: inset 0 0 0.2em var(--light-grey-color)
+    font-family var(--mono-font-family)
+    font-size: 1.8rem
+    display grid
+    grid-gap 0.5em
+
+    &__screen {
+        border: 1px solid var(--light-grey-color)
+        background: aquamarine
+        border-radius: 2em
+        padding 1em
+        text-align right
+    }
+
+    &__keypad {
+        display: grid
+        grid-template-columns repeat(4, minmax(100px, 1fr))
+        grid-template-rows repeat(5, minmax(100px, 1fr))
+        grid-gap: 0.5em;
+
+        button {
+            font-family var(--mono-font-family)
+            font-size: 1.8rem
+            border-radius: 2em
+        }
+    }
+}
